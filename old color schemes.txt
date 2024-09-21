@@ -1,0 +1,13 @@
+old color schemes
+
+green one
+    --colBack: #226f54;
+	--colBody: #87c38f;
+	--colThird: #f4f0bb;
+	--colText: #43291f;
+
+dark blue
+    --colBack: #000814;
+	--colBody: #001d3d;
+	--colThird: #003566;
+	--colText: white;
