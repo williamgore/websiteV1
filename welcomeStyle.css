@@ -1,0 +1,63 @@
+:root {
+	--colBack: #000814;
+	--colBody: #001d3d;
+	--colThird: #003566;
+	--colText: white;
+}
+
+html{
+    font-family: 'Lucida Sans Unicode', Verdana, sans-serif;
+}
+
+body{
+	margin:0;
+	padding:0;
+    height:calc(100vh);
+	background-color: var(--colBody);
+	border: 1vw solid var(--colBack);
+    box-sizing: border-box;
+}
+
+section.header {
+    text-align: center;
+    padding-top: 2vh;
+    color:var(--colText);
+    width:98vw;
+}
+
+section.welcomeMain {
+    text-align: center;
+    padding-top: 35vh;
+    color:var(--colText);
+    width:98vw;
+}
+
+section.aboutMain {
+    text-align: left;
+    padding-top: 5vh;
+    padding-left: 10vh;
+    color:var(--colText);
+    width:88vw;
+}
+
+img {
+    width: 50px;
+    filter:invert();
+    padding-left: 5vw;
+
+    padding-right: 5vw;
+}
+
+a, a:hover, a:active, a:visited {
+    color: var(--colText);
+    text-decoration: none; 
+	outline: none;
+}
+
+section.bottom {
+    position:absolute;
+    bottom: 5vh;
+    width: 98vw;
+    margin-top:auto;
+	text-align: center;
+}
