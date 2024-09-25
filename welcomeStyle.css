@@ -10,9 +10,14 @@ html{
 }
 
 body{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 	margin:0;
 	padding:0;
-    height:calc(100vh);
+    min-height: 100vh;
+    height: auto;
+    padding-bottom: 5vh;
 	background-color: var(--colBody);
 	border: 1vw solid var(--colBack);
     box-sizing: border-box;
@@ -40,12 +45,19 @@ section.aboutMain {
     width:88vw;
 }
 
+.img1 {
+    float: left;
+}
+
 img {
     width: 50px;
-    filter:invert();
     padding-left: 5vw;
-
     padding-right: 5vw;
+}
+
+section.body {
+    margin-right: 5vw;
+    margin-top:5vw;
 }
 
 a, a:hover, a:active, a:visited {
@@ -54,10 +66,10 @@ a, a:hover, a:active, a:visited {
 	outline: none;
 }
 
+
 section.bottom {
-    position:absolute;
-    bottom: 5vh;
+    filter:invert();
+    margin-top: 5vh;
     width: 98vw;
-    margin-top:auto;
 	text-align: center;
 }
