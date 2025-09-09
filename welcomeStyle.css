@@ -60,10 +60,14 @@ section.body {
     margin-top:5vw;
 }
 
-a, a:hover, a:active, a:visited {
+a {
     color: var(--colText);
     text-decoration: none; 
 	outline: none;
+}
+
+a:hover {
+    color: var(grey);
 }
 
 
