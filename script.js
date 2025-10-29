@@ -40,6 +40,6 @@ function removeTitle(s, title) {
 
 ////////////////////////////////////////////////////////////
 
-let titles = ["a student", "a gamer", "bruh im dumb"];
+let titles = ["a gamer", "a hard worker", "a dedicated learner", "the right choice"];
 updateTitles(titles)
 
