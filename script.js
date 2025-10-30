@@ -7,12 +7,11 @@ function updateTitles(titles) {
     typeTime = 125;     //how quickly letters appear - higher = slower
     deleteTime = 100;   //how quickly letters get deleted - higher = slower
     waitTime = 300;     //how long after opening the page the text will start
-    waitToDelete = 3000 //How long a message stays before being deleted
+    waitToDelete = 4000 //How long a message stays before being deleted
 
     //looping through the array of strings
     for(let i = 0; i<titles.length; i++) {
         toAdd = titles[i]
-        charTime = ((toAdd.length) * typeTime) + ((toAdd.length) * deleteTime)
 
         //this types out the letters
         setTimeout(addNewTitle, waitTime, s, toAdd, typeTime)
@@ -23,7 +22,8 @@ function updateTitles(titles) {
             setTimeout(removeTitle, (waitTime + waitToDelete), (s + toAdd), toAdd, deleteTime)
         }
 
-        waitTime = waitTime + charTime + waitToDelete
+        charTime = ((toAdd.length) * typeTime) + ((toAdd.length) * deleteTime)
+        waitTime = waitTime + charTime + waitToDelete - 1500 //TODO fix this magic number
     }
 
 }
