@@ -10,13 +10,16 @@ function updateTitles(titles) {
     waitTime = 300;     //how long after opening the page the text will start
     waitToDelete = 3000 //How long a message stays before being deleted
 
+    //looping through the array of strings
     for(let i = 0; i<titles.length; i++) {
         toAdd = titles[i]
         charTime = ((toAdd.length) * typeTime) + ((toAdd.length) * deleteTime)
 
-
+        //this types out the letters
         setTimeout(addNewTitle, waitTime, s, toAdd, typeTime)
         
+        //this deletes the letters, unless its the last one
+        //then it will stay
         if(i < titles.length - 1) {
             setTimeout(removeTitle, (waitTime + waitToDelete), (s + toAdd), toAdd, deleteTime)
         }
@@ -26,6 +29,7 @@ function updateTitles(titles) {
 
 }
 
+//types out a string
 function addNewTitle(s, title, typeTime) {
     for (let i = 0; i < title.length; i++) {
         s = s + title.charAt(i);
@@ -33,6 +37,7 @@ function addNewTitle(s, title, typeTime) {
     }
 }
 
+//deletes the string
 function removeTitle(s, title, deleteTime) {
     for (let i = 0; i < title.length; i++) {
         s = s.substring(0, s.length - 1);
