@@ -5,18 +5,20 @@ function updateElement(newString, ID) {
 
 function updateTitles(titles) {
     s = "I am "
-    waitTime = 0;
-    waitToDelete = 3000
+    typeTime = 100;     //how quickly letters appear
+    deleteTime = 100;   //how quickly letters get deleted
+    waitTime = 300;     //how long after opening the page the text will start
+    waitToDelete = 3000 //How long a message stays before being deleted
 
     for(let i = 0; i<titles.length; i++) {
         toAdd = titles[i]
-        charTime = ((toAdd.length) * 100) * 2
+        charTime = ((toAdd.length) * typeTime) + ((toAdd.length) * deleteTime)
 
 
-        setTimeout(addNewTitle, waitTime, s, toAdd)
+        setTimeout(addNewTitle, waitTime, s, toAdd, typeTime)
         
         if(i < titles.length - 1) {
-            setTimeout(removeTitle, (waitTime + waitToDelete), (s + toAdd), toAdd)
+            setTimeout(removeTitle, (waitTime + waitToDelete), (s + toAdd), toAdd, deleteTime)
         }
 
         waitTime = waitTime + charTime + waitToDelete
@@ -24,17 +26,17 @@ function updateTitles(titles) {
 
 }
 
-function addNewTitle(s, title) {
+function addNewTitle(s, title, typeTime) {
     for (let i = 0; i < title.length; i++) {
         s = s + title.charAt(i);
-        setTimeout(updateElement,(100*i), s, "me")
+        setTimeout(updateElement,(typeTime*i), s, "me")
     }
 }
 
-function removeTitle(s, title) {
+function removeTitle(s, title, deleteTime) {
     for (let i = 0; i < title.length; i++) {
         s = s.substring(0, s.length - 1);
-        setTimeout(updateElement,(100*i), s, "me")
+        setTimeout(updateElement,(deleteTime*i), s, "me")
     }
 }
 
