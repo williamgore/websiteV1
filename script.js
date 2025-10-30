@@ -1,12 +1,11 @@
 function updateElement(newString, ID) {
     document.getElementById(ID).innerHTML = newString;
-    console.log("Executed")
 }
 
 function updateTitles(titles) {
     s = "I am "
-    typeTime = 100;     //how quickly letters appear
-    deleteTime = 100;   //how quickly letters get deleted
+    typeTime = 125;     //how quickly letters appear - higher = slower
+    deleteTime = 100;   //how quickly letters get deleted - higher = slower
     waitTime = 300;     //how long after opening the page the text will start
     waitToDelete = 3000 //How long a message stays before being deleted
 
@@ -47,6 +46,6 @@ function removeTitle(s, title, deleteTime) {
 
 ////////////////////////////////////////////////////////////
 
-let titles = ["a gamer", "a hard worker", "a dedicated learner", "the right choice."];
-setTimeout(updateTitles, 1000,titles)
+let titles = ["a problem solver", "a people person", "a dedicated learner", "the right choice."];
+updateTitles(titles)
 
